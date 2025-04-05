@@ -15,19 +15,13 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace undericalloader.Auth
-{
-    public class api
-    {
-        public string name, ownerid, secret, version;
-        public static long responseTime;
-        /// <summary>
-        /// Set up your application credentials in order to use keyauth
-        /// </summary>
-        /// <param name="name">Application Name</param>
-        /// <param name="ownerid">Your OwnerID, found in your account settings.</param>
-        /// <param name="secret">Application Secret</param>
-        /// <param name="version">Application Version, if version doesnt match it will open the download link you set up in your application settings and close the app, if empty the app will close</param>
+public static api KeyAuthApp = new api
+    name: "SkylineOG's Application", // App name
+    ownerid: "6xty8PufMw", // Account ID
+    version: "1.0" // Application
+
+
+
         public api(string name, string ownerid, string secret, string version)
         {
             if (ownerid.Length != 10 || secret.Length != 64)
